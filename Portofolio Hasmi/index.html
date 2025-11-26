@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Futuristis - Hasmi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Firebase SDK yang benar -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-logo">Pedro Van-Lume</a>
+            <ul class="navbar-menu">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#journey">Perjalanan</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="navbar-lang">
+                <span class="active-lang">ID</span> / <span>EN</span>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Hai, saya
+                <span class="typing-text" data-texts='["Developer", "Fotografer", "Desainer"]'></span>
+                <span class="cursor">|</span>
+            </h1>
+            <p class="hero-subtitle">Menciptakan pengalaman digital dan visual dari kode, desain, hingga fotografi.</p>
+            <a href="#about" class="btn btn-primary">Baca Lebih Lanjut</a>
+        </div>
+    </header>
+    <main>
+     <!-- Tambahkan kode ini di bagian HTML, sebelum section Contact -->
+<section id="portfolio" class="portfolio reveal">
+    <div class="container">
+        <h2 class="section-title">Karya <span class="text-gradient">Terpilih</span></h2>
+        
+        <div class="portfolio-slider">
+            <div class="slider-track">
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <span class="slide-category">Fotografi</span>
+                        <h3>E-Commerce Platform</h3>
+                    </div>
+                    <div class="slide-gallery">
+                        <div class="gallery-item">
+                            <img src="fotografi 1.jpg" alt="Home Page">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="fotografi 2.JPG" alt="Product Page">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="fotografi 3.jpg" alt="Shopping Cart">
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>Platform e-commerce lengkap dengan sistem pembayaran terintegrasi dan dashboard admin.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">Lihat Detail</a>
+                            <a href="#" class="btn-slider-outline">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <span class="slide-category">Desainer</span>
+                        <h3>Fitness Tracker</h3>
+                    </div>
+                    <div class="slide-gallery">
+                        <div class="gallery-item">
+                            <img src="desain 1.jpg" alt="Dashboard">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="desain 2.jpg" alt="Workout">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="desain 3.png" alt="Progress">
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>Aplikasi fitness dengan tracking workout, monitoring nutrisi, dan analisis progress.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">Lihat Detail</a>
+                            <a href="#" class="btn-slider-outline">App Store</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="slide-header">
+                        <span class="slide-category">Developer</span>
+                        <h3>Analytics Dashboard</h3>
+                    </div>
+                    <div class="slide-gallery">
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/200x300/20B2AA/FFFFFF?text=Overview" alt="Overview">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/200x300/FF6347/FFFFFF?text=Charts" alt="Charts">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://via.placeholder.com/200x300/4682B4/FFFFFF?text=Reports" alt="Reports">
+                        </div>
+                    </div>
+                    <div class="slide-content">
+                        <p>Dashboard analytics dengan visualisasi data real-time dan reporting yang komprehensif.</p>
+                        <div class="slide-actions">
+                            <a href="#" class="btn-slider">Lihat Detail</a>
+                            <a href="#" class="btn-slider-outline">Prototype</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <button class="slider-nav prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Dots Indicator -->
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </div>
+</section>
+        <section id="about" class="about-me container reveal">
+            <h2 class="section-title">Mengapa <span class="text-gradient">Memilih Saya</span></h2>
+            <div class="about-me-content">
+                <div class="about-me-image">
+                    <img src="hsm.jpg" alt="Foto Portrait Pedro Van-Lume">
+                </div>
+                <div class="about-me-info">
+                    <h3>Halo, Saya Hasmi</h3>
+                    <p>Saya adalah seorang developer, designer, dan fotografer yang berfokus pada menciptakan solusi
+                        digital yang kreatif, fungsional, dan visual.
+                        <br> <br>
+                        Saya menggabungkan kemampuan teknis, estetika desain, dan perspektif fotografi untuk
+                        menghasilkan karya yang modern, efisien, dan penuh karakter.
+                    </p>
+
+                    <div class="about-me-stats">
+                        <div class="stat">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Tahun Pengalaman</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projek Selesai</span>
+                        </div>
+                    </div>
+                    <div class="about-me-buttons">
+                        <a href="HASMI_PORTOFOLIO PG.pdf" class="btn btn-primary" download>Portfolio </a>
+                        <a href="CV Hasmi.pdf" class="btn btn-primary" download>Unduh CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="journey" class="journey container reveal">
+            <br> <br>
+            <h2 class="section-title">Perjalanan Akademik & <span class="text-gradient">Profesional</span></h2>
+            <div class="journey-columns">
+                <div class="journey-column">
+                    <h3><i class="fas fa-graduation-cap"></i> Pendidikan</h3>
+                    <div class="journey-card">
+                        <span class="journey-date">2024 - Sekarang</span>
+                        <h4 class="journey-title">Teknik Informatika</h4>
+                        <p class="journey-institution">UIN Maliki Malang</p>
+                    </div>
+                    <div class="journey-card">
+                        <span class="journey-date">2019 - 2023</span>
+                        <h4 class="journey-title">MA - IPA</h4>
+                        <p class="journey-institution">MA Mambaul Ulum Bata-Bata</p>
+                    </div>
+                </div>
+                <div class="journey-column">
+                    <h3><i class="fas fa-briefcase"></i> Pengalaman Profesional</h3>
+                    <div class="journey-card">
+                        <span class="journey-date">2024 - Sekarang</span>
+                        <h4 class="journey-title">Front-end Developer</h4>
+                        <p class="journey-institution">PT. Neon Future Tech</p>
+                    </div>
+                    <div class="journey-card">
+                        <span class="journey-date">2021 - 2022</span>
+                        <h4 class="journey-title">Magang Web Developer</h4>
+                        <p class="journey-institution">Startup Maju Jaya</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills container reveal">
+            <h2 class="section-title">Alat <span class="text-gradient">& Keahlian</span></h2>
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="frontend">Front-end</button>
+                <button class="tab-btn" data-tab="backend">Back-end</button>
+                <button class="tab-btn" data-tab="tools">Alat</button>
+            </div>
+
+            <div class="skills-content">
+                <div class="tab-content active" id="frontend">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <p>HTML</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="95" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>CSS</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="95" style="width: 95%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>JavaScript</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="85" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>React</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="90" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>Tailwind</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="80" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>TypeScript</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="70" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="backend">
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <p>Node.js</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="75" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <p>JavaScript</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-target="60" style="width: 0%;">0%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="tools">
+                    <div class="tools-list">
+                        <span><i class="fas fa-video"></i> Premiere Pro</span>
+                        <span><i class="fab fa-github"></i> GitHub</span>
+                        <span><i class="fas fa-palette"></i> Canva</span>
+                        <span><i class="fas fa-code"></i> VS Code</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact container reveal">
+            <br><br>
+            <h2 class="section-title">Hubungi <span class="text-gradient">Saya</span></h2>
+            <p class="contact-subtitle">Tertarik untuk berkolaborasi? Kirimkan pesan Anda!</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Detail Kontak</h3>
+                    <p><i class="fas fa-envelope"></i> hasmigastilo@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +62 858 5391 5424</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Malang, Indonesia</p>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Nama Lengkap Anda" required>
+                    <input type="email" name="email" placeholder="Alamat Email Anda" required>
+                    <textarea name="message" placeholder="Pesan Anda" rows="6" required></textarea>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <div id="form-status" style="margin-top: 15px; font-weight: bold;"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 Hasmi Portfolio.</p>
+            <div class="footer-socials">
+                <a href="mailto:hasmigastilo@gmail.com" aria-label="Email" title="Email Saya">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram" title="Instagram Saya">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/085853915424" target="_blank" aria-label="WhatsApp" title="WhatsApp Saya">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCFgP27fQvuiazdWO39Mg3qOig7h6Y46DI",
+            authDomain: "hasmi-e514c.firebaseapp.com",
+            projectId: "hasmi-e514c",
+            storageBucket: "hasmi-e514c.firebasestorage.app",
+            messagingSenderId: "45768007198",
+            appId: "1:45768007198:web:70eaf7c20c823a88eed80f",
+            measurementId: "G-LDZ09V4V9M"
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
